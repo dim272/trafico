@@ -1,14 +1,6 @@
 @import "normalize.scss";
 @import "header.scss";
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik:wght@400;600&display=swap');
-
-$white: #FFFFFF;
-$red: #EE4D47;
-$pink: #FCDDD4;
-$black: #402B2B;
-
-$rubik: 'Rubik', sans-serif;
-$dm-serif: 'DM Serif Display', serif;
+@import "faq.scss";
 
 .logo {
   width: 212px;
@@ -59,8 +51,19 @@ $dm-serif: 'DM Serif Display', serif;
 .content {
   width: 100%;
 
-  &--header{
+  &--header {
     margin-top: 0;
+  }
+
+  &--faq {
+    margin-top: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
   }
 
   &__wrap {
@@ -71,6 +74,12 @@ $dm-serif: 'DM Serif Display', serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    &--faq {
+      height: auto;
+      margin: 0 auto;
+      flex-direction: column;
+    }
   }
 
 	&__h1 {
@@ -78,6 +87,12 @@ $dm-serif: 'DM Serif Display', serif;
     font-family: $dm-serif;
     font-size: 10vh;
 	}
+
+  &__h2 {
+    font-family: $dm-serif;
+    font-size: 6vh;
+    color: $black;
+  }
 
   &__half {
     height: 100%;
@@ -122,6 +137,8 @@ $dm-serif: 'DM Serif Display', serif;
 
   &__image {
     height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 
 }
