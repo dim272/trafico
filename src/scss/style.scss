@@ -1,6 +1,7 @@
 @import "normalize.scss";
 @import "header.scss";
 @import "faq.scss";
+@import "clients.scss";
 
 .logo {
   width: 212px;
@@ -80,6 +81,11 @@
       margin: 0 auto;
       flex-direction: column;
     }
+    &--clients {
+      width: 100%;
+      margin-left: 15vw;
+      align-items: center;
+    }
   }
 
 	&__h1 {
@@ -102,6 +108,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    &--clients {
+      flex: 1;
+    }
   }
 
   &__title {

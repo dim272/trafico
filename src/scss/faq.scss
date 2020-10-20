@@ -7,6 +7,8 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  padding-bottom: 10vh;
+
   &__background {
     z-index: -1;
     position: absolute;
@@ -49,6 +51,7 @@
     background: $white;
 
     padding: 3vh;
+    padding-right: 5%;
 
     display: flex;
     justify-content: space-between;
@@ -69,8 +72,10 @@
     }
   }
 
-  &__expand {
+  &__more {
     width: 3vh;
+    height: 3vh;
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -92,5 +97,35 @@
       border-right: 0.3vh solid $red;
     }
   }
+}
 
+
+.collapse {
+
+  &::after {
+    animation: rotate-collapse forwards 0.5s;
+  }
+    @keyframes rotate-collapse {
+      from {
+        transform: translateY(-50%);
+      }
+      to {
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+}
+
+.expand {
+
+  &::after {
+    animation: rotate-expand forwards 0.5s;
+  }
+    @keyframes rotate-expand {
+      from {
+        transform: translateY(-50%) rotate(90deg);
+      }
+      to {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
 }

@@ -1,0 +1,82 @@
+@import "normalize.scss";
+
+.clients {
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__control {
+    width: 60%;
+    height: 3vh;
+
+    margin-bottom: 2vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow {
+    position: relative;
+    width: 3vw;
+    border: 1px solid pink;
+    margin-right: 2vw;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.7vh;
+      height: 0.7vh;
+      border-top: 2px solid pink;
+      border-left: 2px solid pink;
+      transform: translateY(-50%) rotate(-45deg);
+      top: 0;
+    }
+
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    width: 33%;
+    height: max(35vh, 40vh);
+    padding: 7vh;
+    margin-right: 3vh;
+    background-color: $white;
+    box-shadow: $pink-shadow;
+  }
+
+  &__text {
+    font-size: 2vh;
+  }
+
+  &__info {
+    margin-top: 7vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__photo {
+    width: 3vw;
+    margin-right: 3vh;
+  }
+
+  &__name {
+    font-size: 2vh;
+    font-weight: bold;
+  }
+
+}
